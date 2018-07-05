@@ -4,6 +4,8 @@ import templates from './Theme.soy.js';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 
+import './menu-bar/MenuBar';
+
 import './theme.scss';
 
 class Theme extends Component {
