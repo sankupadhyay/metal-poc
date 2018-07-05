@@ -1,0 +1,14 @@
+{namespace IndustryItem}
+
+{template .render}
+	{@param industry: ?}
+
+	<div class="col-sm-4">
+        <div class="card industry-card">
+        <div class="card-body">
+            <h5 class="card-title">{$industry.title}</h5>
+            <p class="card-text">{$industry.description}</p>
+        </div>
+        </div>
+    </div>
+{/template}

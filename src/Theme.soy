@@ -4,6 +4,13 @@
  * This renders the component's whole content.
  */
 {template .render}
-	// <div class="theme">Hello World</div>
+	{@param? industries: ?}
+	<div class="container-fluid">
 	{call MenuBar.render /}
+	// Industries Component
+	{call Industries.render}
+		{param industries: $industries /}
+	{/call}
+
+	</div>
 {/template}
