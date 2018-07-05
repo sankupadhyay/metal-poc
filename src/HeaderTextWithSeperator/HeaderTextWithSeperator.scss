@@ -1,0 +1,21 @@
+.headerTextWithSeperator-text {
+        font-size: 32px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+.headerTextWithSeperator-main-wrapper{
+        display: block;
+        margin-bottom: 15px;
+}
+
+.headerTextWithSeperator-main-wrapper:after{
+content: '';
+display: block;
+width: 35px;
+height: 6px;
+background: #fde428;
+border-radius: 3px;
+margin: 4px 0 0;
+}
+

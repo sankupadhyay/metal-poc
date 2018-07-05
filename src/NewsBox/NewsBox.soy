@@ -1,0 +1,40 @@
+{namespace NewsBox}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param imgSrc:string}
+	{@param headerText:string}
+	{@param metaData:string}
+	<div class="col-md-3 news-box-main-wrapper">
+		<div class="row">
+			<div class="col-md-12">
+				<img src="{$imgSrc}" class="news-box-img">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3 news-box-seperator">
+				{call Seperator.render/}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-11 news-box-header-wrapper">
+				<span class="news-box-header">{$headerText}</span>
+			</div>
+		</div>
+        
+		<div class="row">
+			<div class="col-md-12">
+			
+				{call IconWithText.render }
+					{param iconSrc:'img/clock-icon.jpg'/}
+					{param text: $metaData/}
+				{/call}
+			</div>
+		</div>
+
+	</div>
+{/template}

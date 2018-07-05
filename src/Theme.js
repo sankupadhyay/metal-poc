@@ -5,6 +5,8 @@ import Component from 'metal-component';
 import Soy from 'metal-soy';
 
 import './theme.scss';
+import './NewsBox/NewsBox'
+import './HeaderTextWithSeperator/HeaderTextWithSeperator'
 
 class Theme extends Component {
 }
