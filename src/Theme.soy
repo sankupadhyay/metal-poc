@@ -7,12 +7,23 @@
 
 	{@param? industries: ?}
 	{@param? testimonials: ?}
+	{@param? statsList: ?}
+	{@param? languages:?}
+	{@param? offices:?}
 <div>
+	{call MenuBar.render}
+		{param languages: $languages /} 
+		{param offices: $offices /}
+	{/call}
 	<div class="container-fluid">
 
 		// Industries Component
 		{call Industries.render}
 			{param industries: $industries /}
+		{/call}
+
+		{call Stats.render}
+			{param statsList: $statsList /}
 		{/call}
 
 		// Testimonials Component

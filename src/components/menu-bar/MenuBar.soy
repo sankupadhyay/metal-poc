@@ -1,0 +1,52 @@
+{namespace MenuBar}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+{@param languages: ?}
+{@param offices: ?}
+<div>
+    <nav class="navbar navbar-default menu-bar-fill">
+    <div class="container-fluid menu-bar-fill">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle menu-bar-font" data-toggle="dropdown" href="#">English
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {if $languages}
+                            {foreach $language in $languages}
+                                {call MenuBarDropDown.render}
+                                    {param language: $language /}
+                                {/call}
+                            {/foreach}
+                        {/if}
+                            // {call MenuBarDropDown.render} 
+                            //     {param language: 'French' /}
+                            // {/call}
+                            // {call MenuBarDropDown.render} 
+                            //     {param language: 'German' /}
+                            // {/call}
+                        // {/foreach}
+                    </ul>
+                </li>
+            </ul>
+            <ul  class="nav navbar-nav menu-bar-fill-top_bar_info_switcher">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">London Office
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                             {foreach $office in $offices}
+                                {call MenuBarDropDown.render}
+                                    {param office: $office /}
+                                {/call}
+                            {/foreach}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+</div>
+{/template}
