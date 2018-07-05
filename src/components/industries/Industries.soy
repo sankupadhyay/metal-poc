@@ -1,0 +1,17 @@
+{namespace Industries}
+
+{template .render}
+    {@param industries: ?}
+
+    <div class="row industries-section">
+        <div class="col-sm-12">
+            <h2 class="industries-section-title">industries</h2>
+        </div>
+        {foreach $industry in $industries}
+            {call IndustryItem.render}
+                {param industry: $industry /}
+            {/call}
+        {/foreach}
+    </div>
+
+{/template}

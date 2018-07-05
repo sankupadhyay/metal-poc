@@ -4,11 +4,27 @@
  * This renders the component's whole content.
  */
 {template .render}
+
+	{@param? industries: ?}
+	{@param? testimonials: ?}
 <div>
+	<div class="container-fluid">
+
+		// Industries Component
+		{call Industries.render}
+			{param industries: $industries /}
+		{/call}
+
+		// Testimonials Component
+		{call Testimonials.render}
+			{param testimonials: $testimonials /}
+		{/call}
+
+	</div>
 	//News Section
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-offset-4 col-md-4">
+			<div class="col-md-offset-4 col-md-4" align="center">
 				{call HeaderTextWithSeperator.render}
 					{param header:'news'/}
 				{/call}
@@ -88,5 +104,4 @@
 		</div>
 	</div>
 </div>
-
 {/template}

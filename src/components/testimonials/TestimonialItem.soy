@@ -1,0 +1,24 @@
+{namespace TestimonialItem}
+
+{template .render}
+	{@param testimonial: ?}
+
+	<div class="col-sm-6">
+        <div class="card testimonial-card">
+            <div class="row no-gutters">
+                <div class="col-sm-6">
+                    <img src="{$testimonial.imgUrl}" class="img-fluid" alt="" width="250">
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-block px-2">
+                        <h5 class="card-title">{$testimonial.name}</h5>
+                        <p class="card-info">{$testimonial.position}</p>
+                        <p class="card-info">{$testimonial.company}</p>
+                        <p class="card-text">{$testimonial.description}</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/template}
