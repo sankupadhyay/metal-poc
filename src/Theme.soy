@@ -6,6 +6,7 @@
 {template .render}
 	{@param? industries: ?}
 	{@param? testimonials: ?}
+	{@param? statsList: ?}
 	{@param? languages:?}
 	{@param? offices:?}
 	<div>
@@ -22,6 +23,11 @@
 	// Testimonials Component
 	{call Testimonials.render}
 		{param testimonials: $testimonials /}
+	{/call}
+
+	// Stats Component
+	{call Stats.render}
+		{param statsList: $statsList /}
 	{/call}
 
 	</div>

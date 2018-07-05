@@ -1,0 +1,22 @@
+{namespace Stats}
+
+{template .render}
+    {@param statsList: ?}
+
+    <div class="row stats-section">
+        <div class="col-sm-12">
+            <h4 class="stats-section-title">
+                <mark>
+                    Doing the right thing,
+                </mark><br>
+                at the right time.
+            </h4>
+        </div>
+        {foreach $stats in $statsList}
+            {call StatsItem.render}
+                {param stats: $stats /}
+            {/call}
+        {/foreach}
+    </div>
+
+{/template}
