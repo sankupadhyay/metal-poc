@@ -4,5 +4,16 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param? industries: ?}
+	<div class="container-fluid">
+  
 	<div class="theme">Hello World</div>
+
+
+	// Industries Component
+	{call Industries.render}
+		{param industries: $industries /}
+	{/call}
+
+	</div>
 {/template}
