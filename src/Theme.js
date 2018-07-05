@@ -12,6 +12,9 @@ import './components/industries/IndustryItem'
 import './components/testimonials/Testimonials'
 import './components/testimonials/TestimonialItem'
 
+import './components/stats/Stats'
+import './components/stats/StatsItem'
+
 class Theme extends Component {
 }
 Soy.register(Theme, templates);
@@ -73,7 +76,29 @@ Theme.STATE = {
                 description: "Prior to joining Consulting WP, Bianca ran a project management software firm in the U.S. and worked in consulting and investment banking."
             },
         ]
-    }
+    },
+
+    //Stats
+    statsList : {
+        value : [
+            {
+                label: "Cases Completed",
+                values: "321"
+            },
+            {
+                label: "Consultants",
+                values: "27"
+            },
+            {
+                label: "Award Winning",
+                values: "125"
+            },
+            {
+                label: "Satisfied Customes",
+                values: "100%"
+            },
+        ]
+    },
 }
 
 export { Theme };

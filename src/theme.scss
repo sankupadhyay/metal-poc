@@ -86,3 +86,63 @@
     color: #777;
     line-height: 18px;
 }
+
+
+.stats-section {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 53px !important;
+    padding-top: 110px !important;
+    padding-bottom: 81px !important;
+    background-image: url(http://consulting.stylemixthemes.com/wp-content/uploads/2015/12/Fotolia_95381323_Subscription-1.jpg?id=1279) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+    background-position: 50% 0 !important;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transition: opacity .5s ease;
+    overflow: hidden;
+    
+    left: -61.5px;
+    box-sizing: border-box;
+    width: 1263px;
+    padding-left: 61.5px;
+    padding-right: 61.5px;
+}
+
+.stats-section .stats-section-title {
+    font-size: 45px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: left;
+}
+.stats-section .stats-section-title mark {
+    color: #fde428;
+    background: transparent;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: left;
+}
+
+.stats-card {
+    padding: 28px;
+}
+
+.stats-card .card-body .card-title {
+    line-height: 36px;
+    padding: 17px 0 0;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 14px;
+    font-size: 50px;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.stats-card .card-body .card-text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
