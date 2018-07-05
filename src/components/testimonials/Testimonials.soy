@@ -1,0 +1,17 @@
+{namespace Testimonials}
+
+{template .render}
+    {@param testimonials: ?}
+
+    <div class="row testimonials-section">
+        <div class="col-sm-12">
+            <h2 class="testimonials-section-title">testimonials</h2>
+        </div>
+        {foreach $testimonial in $testimonials}
+            {call TestimonialItem.render}
+                {param testimonial: $testimonial /}
+            {/call}
+        {/foreach}
+    </div>
+
+{/template}

@@ -5,6 +5,7 @@
  */
 {template .render}
 	{@param? industries: ?}
+	{@param? testimonials: ?}
 	<div class="container-fluid">
   
 	<div class="theme">Hello World</div>
@@ -13,6 +14,11 @@
 	// Industries Component
 	{call Industries.render}
 		{param industries: $industries /}
+	{/call}
+
+	// Testimonials Component
+	{call Testimonials.render}
+		{param testimonials: $testimonials /}
 	{/call}
 
 	</div>
