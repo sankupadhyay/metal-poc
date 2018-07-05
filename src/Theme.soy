@@ -5,8 +5,13 @@
  */
 {template .render}
 	{@param? industries: ?}
+	{@param? languages:?}
+	{@param? offices:?}
 	<div class="container-fluid">
-	{call MenuBar.render /}
+	{call MenuBar.render}
+		{param languages: $languages /} 
+		{param offices: $offices /}
+	{/call}
 	// Industries Component
 	{call Industries.render}
 		{param industries: $industries /}

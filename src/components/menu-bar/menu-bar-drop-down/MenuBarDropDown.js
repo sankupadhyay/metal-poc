@@ -8,6 +8,15 @@ import './MenuBarDropDown.scss';
 class MenuBarDropDown extends Component {
 }
 
+MenuBarDropDown.STATE = {
+    languages: {
+        value:[]
+    },
+    offices: {
+        value:[]
+    }
+}
+
 Soy.register(MenuBarDropDown, templates);
 
 export { MenuBarDropDown };

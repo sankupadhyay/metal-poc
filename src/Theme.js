@@ -4,7 +4,7 @@ import templates from './Theme.soy.js';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 
-import './menu-bar/MenuBar';
+import './components/menu-bar/MenuBar';
 
 import './theme.scss';
 
@@ -16,8 +16,29 @@ class Theme extends Component {
 Soy.register(Theme, templates);
 
 Theme.STATE = {
-
-
+    languages :{
+        value:[
+            {
+                name:"English"
+            },
+            {
+                name:"French"
+            },
+            {
+                name:"German"
+            }
+        ]
+    },
+    offices: {
+        value:[
+            {
+                name:"London Office"
+            },
+            {
+                name:"Newyork Office"
+            }
+        ]
+    },
     //Industries
     industries : {
         value : [

@@ -16,7 +16,12 @@ class MenuBar extends Component {
 }
 
 MenuBar.STATE = {
-    languages : ['english', 'french', 'german']
+    languages: {
+        value:[]
+    },
+    offices: {
+        value:[]
+    }
 }
 
 Soy.register(MenuBar, templates);
