@@ -19,6 +19,8 @@ import './components/testimonials/TestimonialItem'
 import './components/stats/Stats'
 import './components/stats/StatsItem'
 
+import './OfficeLocation/OfficeLocation'
+
 class Theme extends Component {
 }
 Soy.register(Theme, templates);

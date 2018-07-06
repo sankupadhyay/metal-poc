@@ -4,11 +4,19 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param iconSrc:string}
+	{@param? iconSrc:string}
 	{@param text:string}
+	{@param? iconClass:string}
 	<div class="icon-text-main-wrapper">
 		<span class="icon-text-icon-wrapper">
-			<img src="{$iconSrc}" class="icon-text-icon-img">
+			{if $iconSrc}
+				<img src="{$iconSrc}" class="icon-text-icon-img">
+			{/if}
+
+			{if $iconClass}
+				<i class="{$iconClass}"></i>
+			{/if}
+
 		</span>
 
 		<span class="icon-text-text-wrapper">

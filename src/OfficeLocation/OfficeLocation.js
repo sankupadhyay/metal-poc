@@ -5,10 +5,11 @@ import Component from 'metal-component';
 import Soy from 'metal-soy';
 
 import './OfficeLocation.scss'
+import '../IconWithText/IconWithText'
 
-class Theme extends Component {
+class OfficeLocation extends Component {
 }
-Soy.register(Theme, templates);
+Soy.register(OfficeLocation, templates);
 
 export { OfficeLocation };
 export default OfficeLocation;

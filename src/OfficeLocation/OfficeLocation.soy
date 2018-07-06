@@ -4,5 +4,25 @@
  * This renders the component's whole content.
  */
 {template .render}
-
+    <div class="officeLocationMainWrapper">
+        <div class="officeLocationHeaderText">United Kingdom</div>
+        <div class="officeLocationAddress">
+            {call IconWithText.render }
+					{param iconClass:'fa fa-map-marker'/}
+					{param text: 'test Address '/}
+			{/call}
+        </div>
+        <div class="officeLocationTel">
+             {call IconWithText.render }
+					{param iconClass:'fa fa-phone'/}
+					{param text: '022-665655566'/}
+			{/call}
+        </div>
+        <div class="officeLocationEmail">
+             {call IconWithText.render }
+					{param iconClass:'fa-envelope'/}
+					{param text: 'test@test.com'/}
+			{/call}
+        </div>
+    </div>
 {/template}
