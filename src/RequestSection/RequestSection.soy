@@ -1,0 +1,47 @@
+{namespace RequestSection}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	<div class="row request-section-wrapper">
+			<div class="col-md-offset-2 col-md-8 margin-top-20">
+				<div class="col-md-4">
+					<div>
+						{call HeaderTextWithSeperator.render}
+							{param header:'request a call back.'/}
+						{/call}
+					</div>
+					<div>Would you like to speak to one of our financial advisers over the phone? Just submit your details and we’ll be in touch shortly. You can also email us if you would prefer.</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="form-header-text">I would like to discuss:</div>
+					<div>
+							<select class="form-control form-select">
+								<option>Business Planning</option>
+								<option>Audit & Assurance</option>
+								<option>Strategic Planning</option>
+								<option>Trades & Stocks</option>
+							</select>
+					</div>
+					<div class="margin-top-30">
+						<input type="tel" class="form-input form-control " placeholder="Phone Number">
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="first-name-wrapper">
+						<input type="tel" class="form-input form-control " placeholder="First Name">
+					</div>
+
+					<div class="margin-top-30">
+						<div class="input-group">
+                			<button type="submit" class="button size-lg icon_right submit-button ">submit <i class="fa fa-chevron-right arrow"></i></button>
+            			</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+{/template}

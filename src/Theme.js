@@ -20,6 +20,7 @@ import './components/stats/Stats'
 import './components/stats/StatsItem'
 
 import './OfficeLocation/OfficeLocation'
+import './RequestSection/RequestSection'
 
 class Theme extends Component {
 }
