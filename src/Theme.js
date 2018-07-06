@@ -7,6 +7,8 @@ import Soy from 'metal-soy';
 import './components/menu-bar/MenuBar';
 
 import './theme.scss';
+import './NewsBox/NewsBox'
+import './HeaderTextWithSeperator/HeaderTextWithSeperator'
 
 import './components/industries/Industries'
 import './components/industries/IndustryItem'
@@ -16,6 +18,8 @@ import './components/testimonials/TestimonialItem'
 
 import './components/stats/Stats'
 import './components/stats/StatsItem'
+
+import './OfficeLocation/OfficeLocation'
 
 class Theme extends Component {
 }
