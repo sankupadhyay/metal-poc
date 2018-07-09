@@ -3,6 +3,7 @@
 import templates from './Theme.soy.js';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
+import Ajax from 'metal-ajax';
 
 import './components/menu-bar/MenuBar';
 
@@ -23,109 +24,66 @@ import './OfficeLocation/OfficeLocation'
 import './RequestSection/RequestSection'
 
 class Theme extends Component {
+
+    attached() {
+        console.log("    Network Calls Started   ");
+
+        this.makeWebServiceRequest('https://8d0ab2a9-2f00-4040-9721-345b7b2f17cf.mock.pstmn.io/lang','get','languages');
+        this.makeWebServiceRequest('https://e159277c-1dce-473f-a147-d777c1308421.mock.pstmn.io/industries','get','industries');
+        this.makeWebServiceRequest('https://e159277c-1dce-473f-a147-d777c1308421.mock.pstmn.io/testimonials','get','testimonials');
+        this.makeWebServiceRequest('https://e159277c-1dce-473f-a147-d777c1308421.mock.pstmn.io/statsList','get','statsList');
+    }
+
+    willUpdate(changes, propsChanges) {
+        console.log(this.languages);
+    }
+
+    willReceiveState(changes) {
+        console.log(changes);
+        
+    }
+
+    rendered(firstRender) {
+        console.log(firstRender);
+    }
+
+    makeWebServiceRequest(url,methodType,key){
+
+        Ajax.request(url, methodType)
+  .then(xhrResponse => {
+    var jsonData  = JSON.parse(xhrResponse.responseText);
+    var temp = this[key];
+    temp = jsonData;
+    this[key]  = temp;
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+    }
 }
 Soy.register(Theme, templates);
 
 Theme.STATE = {
     languages :{
-        value:[
-            {
-                name:"English"
-            },
-            {
-                name:"French"
-            },
-            {
-                name:"German"
-            }
-        ]
+        value:[]
     },
     offices: {
-        value:[
-            {
-                name:"London Office"
-            },
-            {
-                name:"Newyork Office"
-            }
-        ]
+        value:[]
     },
     //Industries
     industries : {
-        value : [
-            {
-                title: "Travel and Aviation Consultantin",
-                imgUrl : "",
-                description: "Company that offers design and build services for you from initial sketches to the final production."
-            },
-            {
-                title: "Business Services Consulting",
-                imgUrl : "",
-                description: "We consider all the drivers of change – from the ground up and we’ll motivate and support you to make the change."
-            },
-            {
-                title: "Consumer Products Consulting",
-                imgUrl : "",
-                description: "Design repeatable growth models and innovation pipelines that generate new products with higher potential and lower risks of failure."
-            },
-            {
-                title: "Financial Services Consulting",
-                imgUrl : "",
-                description: "We work buy-side and sell-side and give our clients hard-hitting and objective answers and focus hard on the best opportunities."
-            },
-            {
-                title: "Energy and Environment Consulting",
-                imgUrl : "",
-                description: "We work across all the major geographies, meaning we understand the underlying drivers in construction markets."
-            },
-            {
-                title: "Surface Transport & Logistics Consulting",
-                imgUrl : "",
-                description: "Scheduled transport operations, from broad market trends and strategy to the development of integrated commercial strategies."
-            },
-        ],
+        value : []
     },
 
     //Testimonials
     testimonials : {
-        value: [
-            {
-                name: "Bianca Hmmound",
-                position: "Managing Director",
-                company: "Ericksson",
-                imgUrl: "http://consulting.stylemixthemes.com/wp-content/uploads/2016/01/testimonial-6-350x250.jpg",
-                description: "Prior to joining Consulting WP, Bianca ran a project management software firm in the U.S. and worked in consulting and investment banking."
-            },
-            {
-                name: "Bianca Hmmound",
-                position: "Managing Director",
-                company: "Ericksson",
-                imgUrl: "http://consulting.stylemixthemes.com/wp-content/uploads/2016/01/testimonial-2-350x250.jpg",
-                description: "Prior to joining Consulting WP, Bianca ran a project management software firm in the U.S. and worked in consulting and investment banking."
-            },
-        ]
+        value: []
     },
 
     //Stats
     statsList : {
-        value : [
-            {
-                label: "Cases Completed",
-                values: "321"
-            },
-            {
-                label: "Consultants",
-                values: "27"
-            },
-            {
-                label: "Award Winning",
-                values: "125"
-            },
-            {
-                label: "Satisfied Customes",
-                values: "100%"
-            },
-        ]
+        value : []
     },
 }
 
