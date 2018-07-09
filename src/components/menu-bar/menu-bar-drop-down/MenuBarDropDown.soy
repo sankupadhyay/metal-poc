@@ -10,7 +10,7 @@
         <li class="menu-bar-drop-font-color"><a href="#">{$language.name}</a></li>
 {/if}
 {if $office}
-        <li class="menu-bar-drop-font-color"><a href="#">{$office.name}</a></li>
+        <li class="menu-bar-drop-font-color"><a href="#" data-onclick="handleOfficeSelect" value="{$office.name}">{$office.name}</a></li>
 {/if}
     // <li><a class="menu-bar-drop-font-color" href="#">{$language}</a></li>
     // <li class="menu-bar-font-color"><a class="menu-bar-drop-font-color" href="#">German</a></li>

@@ -13,6 +13,11 @@ class MenuBar extends Component {
             $(this).toggleClass("result_hover");
         });
     }
+    handleOffice(event){
+        if (event.office) {
+            console.log(event.office);
+        }
+    }
 }
 
 MenuBar.STATE = {

@@ -6,6 +6,7 @@
 {template .render}
 {@param languages: ?}
 {@param offices: ?}
+{@param? handleOffice: ?}
 <div>
     <nav class="navbar navbar-default menu-bar-fill">
     <div class="container-fluid menu-bar-fill">
@@ -32,7 +33,7 @@
                     </ul>
                 </li>
             </ul>
-            <ul  class="nav navbar-nav menu-bar-fill-top_bar_info_switcher">
+            <ul  class="nav navbar-nav navbar-right menu-bar-fill-top_bar_info_switcher">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">London Office
                     <span class="caret"></span></a>
@@ -40,6 +41,7 @@
                              {foreach $office in $offices}
                                 {call MenuBarDropDown.render}
                                     {param office: $office /}
+                                    {param events: ['handleOfficeChange' : $handleOffice] /}
                                 {/call}
                             {/foreach}
                     </ul>
