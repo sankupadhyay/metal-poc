@@ -6,6 +6,7 @@
 {template .render}
 {@param languages: ?}
 {@param offices: ?}
+{@param? officeData: ?}
 {@param? handleOffice: ?}
 <div>
     <nav class="navbar navbar-default menu-bar-fill">
@@ -33,7 +34,7 @@
                     </ul>
                 </li>
             </ul>
-            <ul  class="nav navbar-nav navbar-right menu-bar-fill-top_bar_info_switcher">
+            <ul class="nav navbar-nav navbar-right menu-bar-fill-top_bar_info_switcher">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">London Office
                     <span class="caret"></span></a>
@@ -46,6 +47,13 @@
                             {/foreach}
                     </ul>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {if $officeData}
+                    <li><a class="menu-bar-fill menu-bar-font" href="#">{$officeData.contact}</a></li>
+                    <li><a class="menu-bar-fill menu-bar-font" href="#">{$officeData.address}</a></li>
+                    <li><a class="menu-bar-fill menu-bar-font" href="#">{$officeData.time}</a></li>
+                {/if}
             </ul>
         </div>
     </div>
